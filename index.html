@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Punto de Venta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Proyecto Punto de Venta</h1>
+        <div class="products">
+            <div class="product" data-name="Programación en Python" data-price="325">
+                <img src="images/libro1.jpg" alt="Programación en Python">
+                <h2>Guía de Python</h2>
+                <p>Q.325</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Black Hat Python" data-price="495">
+                <img src="images/libro2.jpg" alt="Black Hat Python">
+                <h2>Black Hat Python</h2>
+                <p>Q.495</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="Metasploit" data-price="425">
+                <img src="images/libro3.jpg" alt="Metasploit">
+                <h2>Metasploit</h2>
+                <p>Q.425</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="product" data-name="CISSP" data-price="550">
+                <img src="images/libro4.jpg" alt="CISSP">
+                <h2>CISSP</h2>
+                <p>Q.550</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="cart">
+            <ul id="cart-items"></ul>
+            <p><b>Total: Q.<span id="cart-total">0</span></b></p>
+            <button id="checkout">Finalizar Compra</button>
+        </div>
+        <div id="payment" class="hidden">
+            <h2>Procesando pago...</h2>
+        </div>
+        <div id="receipt" class="hidden">
+            <h2>Recibo de Compra</h2>
+            <ul id="receipt-items"></ul>
+            <p>Se descargará el PDF del recibo</p>
+            <button id="back" class="add-to-cart">Volver</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> <!-- PARA LA CREACIÓN DE PDF-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.16/jspdf.plugin.autotable.min.js"></script><!-- PARA LA tabla DE PDF-->
+    <script src="script.js"></script>
+</body>
+
+</html>
